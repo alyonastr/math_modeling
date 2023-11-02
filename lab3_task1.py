@@ -3,3 +3,7 @@ speed_of_light=3*(10**8)
 acceleration_of_gravity=9.8
 elementary_charge=1.602176634*(10**(-19))
 atm=101325
+mass_moon=7.35*(10**6)
+mass_earth=5.976*(10**24)
+radius_moon=1.74*(10**6)
+radius
