@@ -6,4 +6,5 @@ atm=101325
 mass_moon=7.35*(10**6)
 mass_earth=5.976*(10**24)
 radius_moon=1.74*(10**6)
-radius
+radius_earth=6.371*(10**6)
+mass_el=9.109534*(10**(-31))
