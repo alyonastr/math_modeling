@@ -3,7 +3,7 @@ N=int(input('N='))
 M=int(input('M='))
 
 A=np.zeros((N, M))
-for i:
-    
+for i in 
+
 print(A)
 
