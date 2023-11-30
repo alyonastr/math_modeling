@@ -1,5 +1,9 @@
 import numpy as np 
-a = [1, 2, 3]
+a = np.array
+s=0
+k
 def mult_func(a):
-    x = (a[0]+a[1]+a[2])/3
-    return x
+    
+    print(f'')
+
+mult_func(a)
