@@ -4,6 +4,7 @@ def func(x):
         a<x<b
         y=x**2
     return y
-
+a=4
+b=
 test = np.arange(1,6,1)
 print(func(test))
