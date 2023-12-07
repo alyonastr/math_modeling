@@ -1,6 +1,6 @@
 import numpy as np 
 
-def square(figure, * args):
+def square(figure, *args):
     if figure == 'круг':
         pl=3.14*(args[0]**2)
     if figure == 'квадрат':
