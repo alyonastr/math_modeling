@@ -1,10 +1,12 @@
 import numpy as np
+a=np.arange(1,10,1)
+b=np.arange(1,10,1)
+
 def func(x):
     for i in range(a,b):
         a<x<b
         y=x**2
     return y
-a=4
-b=
-test = np.arange(1,6,1)
-print(func(test))
+
+print(func(5))
+
