@@ -1,8 +1,7 @@
 import numpy as np 
 
-
 def x(array):
-    for i in range(array):
+    for i in range(a,b):
         a<x<b
         y=x**2
     return y(array)
