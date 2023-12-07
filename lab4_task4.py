@@ -1,12 +1,11 @@
-import numpy as np
-a=np.arange(1,10,1)
-b=np.arange(1,10,1)
+import numpy as np 
 
-def func(x):
-    for i in range(a,b):
+
+def x(array):
+    for i in range(array):
         a<x<b
         y=x**2
-    return y
+    return y(array)
 
-print(func(5))
-
+y=np.arange(1,10,1)
+print(x(5))
