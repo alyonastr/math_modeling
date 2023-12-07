@@ -1,10 +1,12 @@
 import numpy as np 
-
-def x(array):
-    for i in range(a,b):
-        a<x<b
+a=10
+b=30
+c=[]
+def y(x):
+    for i in range (a,b):
         y=x**2
-    return y(array)
+        c.append(y)
+    return c
 
-y=np.arange(1,10,1)
-print(x(5))
+res=y(5)
+print(res)
