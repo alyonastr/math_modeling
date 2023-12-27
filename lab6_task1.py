@@ -1,20 +1,12 @@
-import matplotlib.pyplot as plt
-import numpy as np
-
-def kvadrat(a=1, b=1, c=0):
-
-    x1 = np.arange(1, 6, 1)
-    y1 = np.arange(1,2,1)
-    x2=np.arange(1,6,1)
-    y2=np.arange(1,2,1)
-
-    plt.plot(x1, y1, x2, y2, label='my kvadrat')
-    plt.xlabel('coord - x')
-    plt.ylabel('coord - y')
-    plt.title('Kvadrat')
-    plt.legend()
-    
-    plt.savefig('fig_4.png')
-
-if __name__ == '__main__':
-	kvadrat()
+import matplotlib.pyplot as plt  
+x = [1, 5, 5, 1] 
+y = [1, 1, 5, 5] 
+ 
+plt.plot(y, x, color='black', label='Graf 1', marker='>', ms=5) 
+plt.plot(x, y, color='black', label='Graf 2', marker='o', ms=3) 
+ 
+plt.xlabel('Coord: x') 
+plt.ylabel('Coord: y') 
+plt.title('Base') 
+plt.axis('equal') 
+plt.savefig('fig_5.png')
