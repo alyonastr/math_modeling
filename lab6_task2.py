@@ -3,8 +3,8 @@ import numpy as np
  
 def giperbola_plotter(a=1): 
 
-    x = np.arange(-10, 10, 1) 
-    y = np.arange(-10, 10, 1) 
+    x = np.arange(-10, 10, 0.1) 
+    y = np.arange(-10, 10, 0.1) 
     y = a/x 
  
     plt.plot(x, y, label='My giperbola') 
