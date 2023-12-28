@@ -7,9 +7,9 @@ def circle_plotter(R=3):
     x =R*np.cos(alpha)
     y =R*np.sin(alpha)
 
-    plt.plot(x,y, ls='--', lw=3)
+    plt.plot(x,y, ls='++', lw=3)
     plt.axis('equal')
     plt.savefig('fig_1.png')
 
 if __name__=='__main__':
-    circle_plotter
+    circle_plotter()
