@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 
-def cikloida(R=3,t=4):
-    
-
-    x = R*(t-((np.sin)**3)*t)
-    y = R*(1-((np.cos)**3)*t)
+def cikloida(R=3, t=5):
+    alpha=np.sin(t)**3
+    beta=np.cos(t)**3
+    x = R*(t-alpha)
+    y = R*(1-beta)
 
     plt.plot(x,y, ls='--', lw=3)
     plt.axis('equal')
@@ -13,3 +13,5 @@ def cikloida(R=3,t=4):
 
 if __name__=='__main__':
     cikloida()
+
+
