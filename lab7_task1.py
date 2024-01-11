@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 
-def cikloida(R=3, t=5):
-    alpha=np.sin(t)**3
-    beta=np.cos(t)**3
-    x = R*(t-alpha)
-    y = R*(1-beta)
+def cikloida(R=3):
+    t = np.arange(0, 20, 0.01)
+    x = R*(t-np.sin(t))
+    y = R*(1-np.cos(t))
+    x1= R*np.cos(t)
+    y1= R*np.sin(t)
 
-    plt.plot(x,y, ls='--', lw=3)
+    plt.plot(x,y,x1,y1, ls='--', lw=3)
     plt.axis('equal')
     plt.savefig('fig_5.png')
 
