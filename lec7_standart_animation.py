@@ -25,4 +25,4 @@ if __name__=='__main__':
                         frames=180,
                         interval=30)
 
-ani.save('animation_2.gif')
+ani.save('animation_2.gif') 
