@@ -2,21 +2,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-def bumerang_move(R, angle_vel, x0, y0, xb0, yb0, t):
-    t = np.arange(0, 4*np.pi, 0.1)
-    alpha = angle_vel * np.pi / 180*t
-    x = R*np.cos(alpha)
-    y = R*np.sin(alpha)
-    xb = x0*np.cos(t)-y0*np.sin(t)
-    yb = y0*np.cos(t)+x0*np.sin(t)
+def bumerang_move(R, angle_vel, vx0, vy0, vbx0, vby0, t):
+    alpha = angle_vel * np.pi / 360*t
+
+    x0 = vx0 * t
+    y0 = vy0 * t
+    x = x0 + R*np.cos(alpha)
+    y = y0 + R*np.sin(alpha)
+
+    xb0 = vbx0 * t
+    yb0 = vby0 * t
+    xb = xb0*np.cos(t)-yb0*np.sin(t)
+    yb = yb0*np.cos(t)+xb0*np.sin(t)
     return x, y, xb, yb
 
 def animate(i):
-    ball.set_data(bumerang_move(R=2, angle_vel=1, x0=1, y0=1, xb0=1, yb0=1, t=i))
+    ball.set_data(bumerang_move(R=2, angle_vel=9, vx0=1, vy0=1, vbx0=1, vby0=1, t=i))
 
 if __name__=='__main__':
     fig, ax = plt.subplots()
-    ball, = plt.plot([], [], '-', color='g', label='Ball')
+    ball, = plt.plot([], [], '--', color='g', label='Ball')
 
     edge=3
     plt.axis('equal')
@@ -25,7 +30,7 @@ if __name__=='__main__':
 
     ani = FuncAnimation(fig,
                         animate,
-                        frames=100,
+                        frames=360,
                         interval=30)
 
 ani.save('animation_5.gif')
