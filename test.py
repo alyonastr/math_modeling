@@ -9,8 +9,8 @@ def circle_move(alpha):
     y = 12 * np.sin(t) - 8*np.sin(1.5*t)
     R=10
 
-    X0= R * np.cos(alpha*10)
-    Y0= R * np.sin(alpha*10)
+    X0= R * np.cos(alpha*300)
+    Y0= R * np.sin(alpha*300)
 
     X = x * np.cos(alpha) - y * np.sin(alpha) + X0
     Y = y * np.cos(alpha) + x * np.sin(alpha) + Y0
