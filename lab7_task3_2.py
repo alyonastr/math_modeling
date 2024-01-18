@@ -25,7 +25,7 @@ if __name__=='__main__':
 
     ani = FuncAnimation(fig,
                         animate,
-                        frames=180,
+                        frames=100,
                         interval=30)
 
 ani.save('animation_5.gif')
