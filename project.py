@@ -26,7 +26,7 @@ if __name__ == '__main__':
     fig, ax = plt.subplots()
     ball, = plt.plot([], [], '-', color='r', label='Ball')
 
-    edge = 10000
+    edge = 1000
     plt.axis('equal')
     ax.set_xlim(-edge, edge)
     ax.set_ylim(-edge, edge)
