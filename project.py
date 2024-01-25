@@ -27,7 +27,6 @@ if __name__ == '__main__':
     ball, = plt.plot([], [], '-', color='r', label='Ball')
 
     edge = 500
-    plt.axis('equal')
     ax.set_xlim(-edge, edge)
     ax.set_ylim(-edge, edge)
     
