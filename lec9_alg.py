@@ -18,12 +18,5 @@ plt.xlabel('Период распада, секунды')
 plt.ylabel('Функция распада')
 plt.title('Радиоактивный распад')
 plt.legend()
- 
-plt.show()
 
-if __name__=='__main__':
-    radio_function()
-
-plt.axis('equal')
-plt.savefig('fig_9.png')
-   
+plt.savefig('fig1.png')
