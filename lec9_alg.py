@@ -9,12 +9,10 @@ def radio_function(m, t):
     return dmdt
  
 m_0 = 10
-k = 1.61 * 10**(-6) # Постоянная распада для Висмута 210
+k = 1.61 * 10**(-6) 
 
- # Решение дифференциального уравнения функцией odeint
 m_t = odeint(radio_function, m_0, t)
  
-# Построение решения в виде графика функции
 plt.plot(t, m_t[:,0], label='Распад Висмута 210')
 plt.xlabel('Период распада, секунды')
 plt.ylabel('Функция распада')
@@ -25,3 +23,7 @@ plt.show()
 
 if __name__=='__main__':
     radio_function()
+
+plt.axis('equal')
+plt.savefig('fig_9.png')
+   
