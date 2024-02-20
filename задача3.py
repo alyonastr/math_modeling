@@ -8,10 +8,10 @@ t = np.linspace(0, 5, frames)
 
 def move_func(z, t):
     x, v_x, y, v_y = z 
-    dxdt = v_x
-    dv_xdt = g - (k * x) / m
     dydt = v_y
-    dv_ydt = 0
+    dv_ydt = g - (k * y) / m
+    dxdt = v_x
+    dv_xdt = 0
     return dxdt, dv_xdt, dydt, dv_ydt
 
 g = 9.8
@@ -21,9 +21,9 @@ k = 10
 alpha = 80 * np.pi / 180
 
 x0 = 0
-v_x0 = 0.5
+v_y0 = 0.5
 y0 = 0
-v_y0 = 0
+v_x0 = 0
 
 z0 = x0, v_x0, y0, v_y0
 
@@ -52,7 +52,7 @@ ani = FuncAnimation(fig,
                     interval=30)
 
 edge = 15
-ax.set_xlim(0, edge)
+ax.set_xlim(-edge, edge)
 ax.set_ylim(0, edge)
 
 ani.save('gif3.gif')

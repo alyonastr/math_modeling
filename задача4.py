@@ -9,9 +9,9 @@ t = np.linspace(0, 5, frames)
 def move_func(z, t):
     x, v_x, y, v_y = z 
     dxdt = v_x
-    dv_xdt = - (gamma * vv_x - v_x) * np.cos(beta)
+    dv_xdt = - gamma * vv_x * np.cos(beta) - kappa * v_x
     dydt = v_y
-    dv_ydt = (gamma * vv_y - v_y) * np.sin(beta) - g
+    dv_ydt = gamma * vv_y * np.sin(beta) - g - kappa * v_y
     return dxdt, dv_xdt, dydt, dv_ydt
 
 g = 9.8
@@ -21,6 +21,7 @@ m = 1
 vv = 20 
 beta = 30 * np.pi / 180
 alpha = 80 * np.pi / 180
+kappa = 0.3
 
 x0 = 0
 v_x0 = v * np.cos(alpha)
