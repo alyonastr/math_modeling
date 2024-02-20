@@ -25,7 +25,7 @@ v_y0 = v * np.sin(alpha)
 
 z0 = x0, v_x0, y0, v_y0
 
-sol = odein(move_func, z0, t)
+sol = odeint(move_func, z0, t)
 def solve_func(i, key):
     if key == 'point':
         x = sol[i, 0]
@@ -38,7 +38,7 @@ def solve_func(i, key):
 fig, ax = plt.subplots()
 
 ball, = plt.plot( [], [], 'o', color='r')
-ball line, = plt.plot( [], [], '-', color='r')
+ball_line, = plt.plot( [], [], '-', color='r')
 
 def animate(i):
     ball.set_data(solve_func(i, 'point'))
@@ -53,4 +53,4 @@ edge = 15
 ax.set_xlim(0, edge)
 ax.set_ylim(0, edge)
 
-
+ani.save('gif1.gif')
