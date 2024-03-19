@@ -64,19 +64,19 @@ def move_func(s, t):
             dxdt2, dv_xdt2, dydt2, dv_ydt2,
             dxdt3, dv_xdt3, dydt3, dv_ydt3)
 
-x10 = 0
+x10 = - a / 2
 v_x10 = 10000
-y10 = - a / 2
+y10 = 0
 v_y10 = 0
 
-x20 = - 149 * 10 **9
+x20 = 0
 v_x20 = 0
-y20 = 0
-v_y20 = - 30000
+y20 = (1.7 * a) / 2
+v_y20 = 0
 
-x30 = 0
+x30 = a / 2
 v_x30 = - 10000
-y30 = 149 * 10**9
+y30 = 0
 v_y30 = 0
 
 s0 = (x10, v_x10, y10, v_y10,
